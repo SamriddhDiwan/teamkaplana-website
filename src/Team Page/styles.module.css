@@ -1,0 +1,149 @@
+.body {
+  color: aliceblue;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  z-index: 15;
+  position: relative;
+  background-image: url("bg 3.jpg");
+  background-size: cover;
+  /*background-repeat: repeat;  */
+}
+
+
+.info {
+  margin: 150px;
+  text-align: center;
+}
+
+.info h1 {
+  font-size: 7rem;
+}
+
+.info p {
+  font-size: 2rem;
+}
+
+.imagecontainer {
+  margin-top: -50px;
+  padding: 50px;
+  height: 600px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.teambox {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.teambox img {
+  width: 250px;
+  height: 400px;
+  position: relative;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.ph1 {
+  transform: translateX(-500%) translateY();
+  opacity: 0;
+}
+
+.ph2 {
+  transform: translateX(500%);
+  opacity: 0;
+}
+
+.animate .ph1 {
+  animation: slideInLeft 2s ease-in-out forwards;
+}
+
+.animate .ph2 {
+  animation: slideInRight 2s ease-in-out forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-500%);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) translateY(-5%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(500%);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) translateY(10%);
+    opacity: 1;
+  }
+}
+
+.ph1 , .ph2 {
+  --g: 4px;     /* the gap */
+  --b: 6px;    /* border thickness*/
+  --c: #d9ebb6; /* the color */
+  
+  
+  /* padding: calc(var(--g) + var(--b)); */
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+  background:
+    var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+    var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b),var(--b) 200%;
+  cursor: pointer;
+  transition: .3s;
+}
+.ph1:hover , .ph2:hover {
+  --_p: 75%;
+  scale: 1.1;
+}
+
+.teambox > p{
+  margin: 8rem;
+  margin-bottom: 4rem;
+  font-size: 5rem;
+}
+
+.depart >h2{
+  margin: 8rem;
+  margin-bottom: 1rem;
+  font-size: 4rem;
+}
+
+.depart_info {
+  font-size: 1.5rem;
+  margin-left: 8rem;
+  font-weight: lighter;
+  width: 1000px; /* Keep the width fixed */
+  overflow: hidden; /* Hide the overflow */
+  text-overflow: ellipsis; /* Add "..." to overflowed content */
+  white-space: normal; /* Prevent wrapping to the next line */
+}
+
+.depart_info>p{
+  color:rgba(132, 138, 143, 0.8);
+  text-align: justify;
+}
+
+

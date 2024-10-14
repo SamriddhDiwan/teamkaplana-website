@@ -2,7 +2,7 @@ import React from "react";
 import './footer.css';
 import facebook from './icons8-facebook-48.png';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <div class='footer-wtext'>
       <p>Connect with us on</p>
@@ -22,6 +22,4 @@ const Footer = () => {
   </div>
   );
 };
-
-export default Footer;
 
